@@ -1,0 +1,36 @@
+/* Cinematic 3D chapter sequence. The original photo remains the WebGL fallback. */
+.hero{height:auto;max-height:none;min-height:0;overflow:clip;background:#e6eae0;isolation:auto}
+.motion-ready .hero{height:280svh}
+.hero-stage{height:calc(100svh - 92px);min-height:610px;position:sticky;top:92px;overflow:hidden;isolation:isolate}
+#architecture{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0;transition:opacity 1.2s}
+.has-3d #architecture{opacity:1}.has-3d .hero-image{opacity:.13;filter:saturate(.3)}
+.hero-shade{background:linear-gradient(90deg,#e6eae0 0%,rgb(230 234 224 / .9) 25%,rgb(230 234 224 / .2) 62%,transparent)}
+.hero-chapter{position:absolute;inset:0;opacity:0;pointer-events:none;transform:translateY(35px);transition:opacity .65s,transform .9s cubic-bezier(.16,1,.3,1);padding-top:clamp(75px,10vh,140px);max-width:850px}
+.hero-chapter.active{opacity:1;pointer-events:auto;transform:translateY(0)}
+.hero-chapter h2{font-size:clamp(54px,6.5vw,102px);letter-spacing:-.065em;line-height:1.035}
+.hero-chapter em{font-style:normal;color:var(--green)}
+.hero-caption{bottom:96px;right:35px;z-index:2;animation:float-caption 6s ease-in-out infinite}
+.hero-bottom{color:var(--green);text-shadow:none;bottom:26px}
+.scene-indicator{position:absolute;bottom:85px;left:calc(var(--gutter) - 12px);display:flex;flex-direction:column;gap:13px;z-index:2;font:500 8px/1.5 Consolas,monospace;letter-spacing:.13em;color:var(--green)}
+.scene-track{height:2px;width:175px;background:rgb(24 61 53 / .16)}.scene-track i{display:block;width:100%;height:100%;background:var(--green);transform:scaleX(0);transform-origin:left}
+.motion-toggle{position:absolute;right:30px;top:25px;z-index:3;border:1px solid #9eaf9b;border-radius:999px;padding:10px 17px;font-size:10px;background:rgb(241 242 237 / .8);display:flex;gap:20px;align-items:center}.motion-toggle:hover{background:var(--green);color:var(--paper)}
+.motion-ribbon{overflow:hidden;background:var(--green);color:#d4dfcb;padding:23px 0;white-space:nowrap}.motion-ribbon>div{width:max-content;animation:ribbon 35s linear infinite;font:500 clamp(17px,2.4vw,36px)/1.1 'Segoe UI',sans-serif;letter-spacing:-.035em}.motion-ribbon span{display:inline-block;margin:0 55px;color:#9db291}
+.area-grid,.journal-grid{perspective:1100px}.area-tile,.journal-feature{transform:perspective(1100px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transform-style:preserve-3d;transition:transform .4s cubic-bezier(.2,.8,.2,1),background-color .3s;will-change:auto}
+.area-tile:hover{transform:perspective(1100px) translateY(-6px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg))}
+.area-tile::after,.journal-feature::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--shine-x,50%) 0%,rgb(255 255 255 / .3),transparent 65%);pointer-events:none;opacity:0;transition:opacity .35s}.area-tile:hover::after,.journal-feature:hover::after{opacity:1}
+.area-art,.hill-art,.parel-art,.prabha-art{transition:transform .8s cubic-bezier(.16,1,.3,1)}.area-tile:hover .area-art,.area-tile:hover .parel-art,.area-tile:hover .prabha-art{transform:translateY(-16px) scale(1.04)}.area-tile:hover .hill-art{transform:rotate(-5deg) translateY(-12px)}
+.button:hover span,.text-link:hover span{transform:translate(3px,-3px)}.button span,.text-link span{display:inline-block;transition:transform .3s}
+@keyframes float-caption{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes ribbon{to{transform:translateX(-50%)}}
+@keyframes photo-depth{from{transform:scale(1.15) translateY(-3%)}to{transform:scale(1) translateY(3%)}}
+@keyframes heading-rise{from{transform:translateY(35px);opacity:.2}to{transform:translateY(0);opacity:1}}
+@supports(animation-timeline:view()){
+  .interior img{animation:photo-depth linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+  .section h2{animation:heading-rise linear both;animation-timeline:view();animation-range:entry 0% entry 95%}
+}
+.motion-paused .hero-caption,.motion-paused .motion-ribbon>div{animation-play-state:paused}
+.motion-paused .interior img,.motion-paused .section h2{animation:none}
+@media(min-width:1600px){.hero-chapter{padding-left:calc((100vw - 1480px)/2 + 64px);max-width:1100px}}
+@media(max-width:1100px) and (min-width:768px){.hero-chapter h1,.hero-chapter h2{font-size:7.8vw}.hero-chapter{padding-top:100px}.hero-chapter .hero-description{max-width:330px}.hero-caption{font-size:10px;bottom:85px;padding:13px 18px}}
+@media(max-width:767px){.motion-ready .hero{height:250svh;min-height:0}.hero-stage{height:calc(100svh - 77px);min-height:650px;top:77px}.hero-chapter{padding-top:55px;padding-bottom:0;max-width:100%}.hero-chapter h1,.hero-chapter h2{font-size:clamp(45px,8.5vw,64px)}.hero-chapter .hero-description{font-size:12px;margin-top:18px;margin-bottom:20px}.hero-chapter .button{min-height:43px;padding:10px 19px;font-size:10px}.hero-shade{background:linear-gradient(180deg,rgb(230 234 224 / .9),rgb(230 234 224 / .6) 38%,transparent 65%)}.hero-caption{display:none}.motion-toggle{top:auto;bottom:52px;right:15px;padding:8px 12px;font-size:9px;gap:10px}.scene-indicator{bottom:54px;left:calc(var(--gutter) - 8px);font-size:7px;gap:9px}.scene-indicator>span:last-child{max-width:150px}.scene-track{width:120px}.hero-bottom{font-size:7px;bottom:17px}.motion-ribbon{padding-block:18px}.motion-ribbon span{margin-inline:30px}}
+@media(prefers-reduced-motion:reduce){.motion-ready .hero{height:auto}.hero-stage{position:relative;top:0}.hero-chapter:not([data-chapter="0"]){display:none}.scene-indicator{display:none}.hero-caption,.motion-ribbon>div{animation:none}.interior img,.section h2{animation:none}.hero-chapter{transition:none}.area-tile,.journal-feature{transform:none!important}.motion-toggle{display:none}}

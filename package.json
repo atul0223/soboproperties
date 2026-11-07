@@ -1,0 +1,13 @@
+{
+  "name": "sobo-properties",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node --check js/main.js && node --check js/architecture.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

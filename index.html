@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1f2ed">
+  <meta name="description" content="Discover a different way to find your place in Mumbai. Explore neighborhoods and start a property conversation with SoBo Properties.">
+  <meta name="robots" content="noindex,nofollow">
+  <title>SoBo Properties | A place that feels like you.</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/hero.png" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/motion.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/architecture.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header">
+    <a class="brand" href="#home" aria-label="SoBo Properties home" translate="no"><span class="brand-name">so<span class="brand-b">b</span>o<span class="brand-dot">.</span></span><span class="brand-sub">PROPERTIES</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#neighborhoods">The neighborhoods</a><a href="#approach">Our approach</a><a href="#journal">Field notes</a>
+    </nav>
+    <a class="button small nav-cta" href="#contact">Let’s find your place <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation" hidden>
+      <a href="#neighborhoods">The neighborhoods</a><a href="#approach">Our approach</a><a href="#journal">Field notes</a><a href="#contact">Let’s find your place ↗</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-stage">
+      <canvas id="architecture" aria-hidden="true"></canvas>
+      <button id="motion-toggle" class="motion-toggle" type="button" aria-pressed="false">Pause motion <span aria-hidden="true">&#8599;</span></button>
+      <img class="hero-image" src="assets/hero.png" alt="Architectural concept of a sea-facing Mumbai apartment terrace in soft morning light" width="1536" height="1024" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="hero-content hero-chapter active" data-chapter="0">
+        <p class="eyebrow">ROOTED IN MUMBAI. MADE FOR YOU.</p>
+        <h1 id="hero-title">A city of millions.<br>A place that’s <em>yours.</em></h1>
+        <p class="hero-description">The right home is more than an address.<br>It’s where your version of Mumbai begins.</p>
+        <a class="button" href="#neighborhoods">Find your neighborhood <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-content hero-chapter" data-chapter="1" inert><p class="eyebrow">A DIFFERENT PERSPECTIVE</p><h2>Look beyond<br>the <em>skyline.</em></h2><p class="hero-description">Every floor holds a different story.<br>Find the one you want to come home to.</p><a class="button" href="#approach">Discover our approach <span aria-hidden="true">&#8599;</span></a></div>
+      <div class="hero-content hero-chapter" data-chapter="2" inert><p class="eyebrow">MAKE ROOM FOR WHAT MATTERS</p><h2>Your life.<br>Your <em>coordinates.</em></h2><p class="hero-description">The right neighborhood changes everything.<br>Let&#8217;s find your place in the city.</p><a class="button" href="#neighborhoods">Explore Mumbai <span aria-hidden="true">&#8599;</span></a></div>
+      <div class="scene-indicator" aria-hidden="true"><span id="scene-label">THE CITY</span><span class="scene-track"><i></i></span><span>SCROLL TO CHANGE PERSPECTIVE &#8595;</span></div>
+      <a class="hero-caption glass" href="#approach"><span class="caption-mark" aria-hidden="true">↗</span><span>A little more sea.<br><strong>A little more possibility.</strong></span></a>
+      <div class="hero-bottom"><span>MUMBAI, THROUGH A DIFFERENT LENS</span><a href="#intro">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
+      </div>
+    </section>
+
+    <div class="motion-ribbon" aria-hidden="true"><div>MUMBAI IN MOTION <span>?</span> A DIFFERENT PERSPECTIVE <span>?</span> FIND YOUR PLACE <span>?</span> MUMBAI IN MOTION <span>?</span> A DIFFERENT PERSPECTIVE <span>?</span> FIND YOUR PLACE <span>?</span></div></div>
+    <section class="intro wrap section" id="intro">
+      <p class="eyebrow">MORE THAN SQUARE FEET</p>
+      <div class="intro-main"><h2>Good homes.<br>Better beginnings.</h2><div class="intro-copy"><p>Morning walks by the water. Your favorite café around the corner. A shorter journey home.</p><p>Property is personal. Start with the life you want to live, then find the address that fits.</p><a class="text-link" href="#approach">Get to know the SoBo approach <span aria-hidden="true">↗</span></a></div></div>
+      <div class="values-strip"><span>YOUR LIFE, FIRST</span><span>LOCAL PERSPECTIVE</span><span>ROOM TO THINK</span><span>A HUMAN CONVERSATION</span></div>
+    </section>
+
+    <section class="neighborhoods section" id="neighborhoods" aria-labelledby="neighborhood-title">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">THE CITY, UP CLOSE</p><h2 id="neighborhood-title">Find your kind<br>of Mumbai.</h2></div><p>Different rhythms. Different possibilities.<br>Start with a neighborhood that feels right.</p></div>
+        <form class="finder" id="finder" action="#area-results">
+          <fieldset><legend>I’m looking to</legend><div class="intent-controls"><label><input type="radio" name="intent" value="buy" checked><span>Buy</span></label><label><input type="radio" name="intent" value="rent"><span>Rent</span></label></div></fieldset>
+          <div class="select-wrap"><label for="lifestyle">My kind of neighborhood</label><select id="lifestyle" name="lifestyle"><option value="all">A little of everything</option><option value="sea">By the sea</option><option value="connected">Well connected</option><option value="quiet">A quieter rhythm</option></select></div>
+          <button class="button" type="submit">Explore the areas <span aria-hidden="true">↗</span></button>
+        </form>
+        <p class="results-label" id="area-status" aria-live="polite">Explore 4 neighborhood guides</p>
+        <div class="area-grid" id="area-results">
+          <button class="area-tile area-wide" type="button" data-area="Worli" data-tags="sea connected"><span class="area-top">SEA &amp; SKYLINE <span aria-hidden="true">↗</span></span><span class="area-bottom"><strong>Worli</strong><span>City energy. Coastal perspective.</span></span><span class="area-art worli-art" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></button>
+          <button class="area-tile area-green" type="button" data-area="Malabar Hill" data-tags="sea quiet"><span class="area-top">A QUIETER CORNER <span aria-hidden="true">↗</span></span><span class="area-bottom"><strong>Malabar Hill</strong><span>Leafy lanes. A slower morning.</span></span><span class="hill-art" aria-hidden="true"><i></i><i></i><i></i></span></button>
+          <button class="area-tile area-stone" type="button" data-area="Lower Parel" data-tags="connected"><span class="area-top">IN THE MIDDLE OF IT <span aria-hidden="true">↗</span></span><span class="area-bottom"><strong>Lower Parel</strong><span>Work, weekends, and everything between.</span></span><span class="parel-art" aria-hidden="true"><i></i><i></i><i></i></span></button>
+          <button class="area-tile area-blue area-wide" type="button" data-area="Prabhadevi" data-tags="sea connected quiet"><span class="area-top">A LITTLE BALANCE <span aria-hidden="true">↗</span></span><span class="area-bottom"><strong>Prabhadevi</strong><span>A neighborhood with room to settle in.</span></span><span class="prabha-art" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></button>
+        </div>
+        <p class="section-note">Neighborhood inspiration, not live property listings. Ask @soboproperty about current availability.</p>
+      </div>
+    </section>
+
+    <section class="approach section wrap" id="approach">
+      <figure class="interior"><img src="assets/interior.png" alt="Illustrative contemporary living room overlooking the Arabian Sea, with warm stone floors and natural light" width="1024" height="1536" loading="lazy"><figcaption class="glass">A home should fit your life.<br><strong>Not the other way around.</strong></figcaption></figure>
+      <div class="approach-copy"><p class="eyebrow">THE SOBO APPROACH</p><h2>A little less noise.<br>A lot more clarity.</h2><p>Finding a place comes with enough questions. A useful conversation starts with the right ones.</p>
+        <ol class="steps"><li><span class="step-number">01</span><div><h3>Start with your everyday.</h3><p>Your commute, your people, your non-negotiables. Define what a good home means to you.</p></div></li><li><span class="step-number">02</span><div><h3>Get a feel for the neighborhood.</h3><p>Look beyond the floor plan. Walk the lanes, see the light, and imagine your ordinary Tuesday.</p></div></li><li><span class="step-number">03</span><div><h3>Make room for the details.</h3><p>Bring your questions about the property, costs and next steps before making a decision.</p></div></li></ol>
+        <a class="text-link" href="#contact">Tell us what matters to you <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="journal section" id="journal"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">FIELD NOTES</p><h2>A better-informed<br>next move.</h2></div><a class="text-link" href="https://www.instagram.com/soboproperty/" target="_blank" rel="noopener noreferrer">Find SoBo on Instagram <span aria-hidden="true">↗</span></a></div>
+      <div class="journal-grid"><article class="journal-feature"><p class="article-category">THE VIEWING CHECKLIST</p><h3>Visit the home.<br>Meet the neighborhood.</h3><p>A great floor plan is only one part of the story. A few things to notice when you visit.</p><button class="text-link" type="button" data-note="viewing">Read the field note <span aria-hidden="true">↗</span></button><span class="window-art" aria-hidden="true"><i></i><i></i></span></article><div class="journal-list"><article><p class="article-category">FINDING YOUR FIT</p><h3>Your non-negotiables,<br>before your shortlist.</h3><button class="text-link" type="button" data-note="shortlist">Read the field note <span aria-hidden="true">↗</span></button></article><article><p class="article-category">A FRESH PERSPECTIVE</p><h3>Sea view or shorter commute?<br>Make the trade-offs yours.</h3><button class="text-link" type="button" data-note="tradeoffs">Read the field note <span aria-hidden="true">↗</span></button></article></div></div>
+    </div></section>
+
+    <section class="contact section" id="contact"><div class="wrap contact-grid"><div><p class="eyebrow">YOUR NEXT CHAPTER</p><h2>Somewhere in Mumbai,<br>there’s a place<br>with your name on it<span>.</span></h2><p>Tell SoBo what you’re looking for.<br>Start with a conversation.</p><div class="contact-actions"><a class="button light" href="https://www.instagram.com/soboproperty/" target="_blank" rel="noopener noreferrer">Say hello on Instagram <span aria-hidden="true">↗</span></a><button class="contact-brief" id="open-brief" type="button">Build my property brief <span aria-hidden="true">↗</span></button></div></div><div class="contact-side"><p>MUMBAI IS A FEELING.</p><span>Let’s find<br>yours.</span><a href="https://www.instagram.com/soboproperty/" target="_blank" rel="noopener noreferrer">@soboproperty ↗</a></div></div></section>
+  </main>
+
+  <footer class="footer wrap"><div class="footer-top"><a class="brand" href="#home" translate="no"><span class="brand-name">sobo<span class="brand-dot">.</span></span><span class="brand-sub">PROPERTIES</span></a><p>A place. A feeling. A new beginning.</p><a class="text-link" href="#home">Back to top <span aria-hidden="true">↑</span></a></div><div class="footer-bottom"><span>© <span id="year">2026</span> SoBo Properties</span><span>Mumbai, India</span><span>Crafted by <a href="https://softwarethekedar.in" target="_blank" rel="noopener noreferrer">Software Thekedar ↗</a></span></div><details class="preview-note"><summary>About this concept preview</summary><p>Independent website concept for SoBo Properties. Branding and business details await confirmation from @soboproperty. Architectural images are AI-generated illustrations, not actual properties. Neighborhood guides are inspiration, not live listings. No enquiries are sent or stored by this website.</p></details></footer>
+
+  <dialog id="area-dialog" aria-labelledby="area-dialog-title"><div class="dialog-inner"><button class="dialog-close" type="button" aria-label="Close neighborhood guide">×</button><p class="eyebrow">NEIGHBORHOOD PERSPECTIVE</p><h2 id="area-dialog-title"></h2><p id="area-description"></p><h3>On your first walk</h3><ul id="area-tips" class="note-list"></ul><p class="dialog-note">This guide is a starting point. Property availability, pricing, travel times and suitability need to be checked for your requirements.</p><a class="button" id="area-enquire" href="https://www.instagram.com/soboproperty/" target="_blank" rel="noopener noreferrer">Ask SoBo about this area <span aria-hidden="true">↗</span></a><button class="text-link dialog-brief" type="button">Add to my property brief <span aria-hidden="true">↗</span></button></div></dialog>
+  <dialog id="note-dialog" aria-labelledby="note-title"><div class="dialog-inner"><button class="dialog-close" type="button" aria-label="Close field note">×</button><p class="eyebrow">SOBO FIELD NOTES</p><h2 id="note-title"></h2><div id="note-content"></div><a class="text-link" href="#contact" id="note-contact">Start your conversation <span aria-hidden="true">↗</span></a></div></dialog>
+  <dialog id="brief-dialog" aria-labelledby="brief-title"><div class="dialog-inner"><button class="dialog-close" type="button" aria-label="Close property brief">×</button><p class="eyebrow">A GOOD PLACE TO START</p><h2 id="brief-title">Your property brief.</h2><p>Make a short brief to copy into your Instagram conversation with SoBo. Nothing is sent or saved here.</p><form id="brief-form"><div class="form-row"><div><label for="brief-intent">I’m looking to</label><select id="brief-intent" name="intent"><option value="buy">Buy</option><option value="rent">Rent</option></select></div><div><label for="brief-area">Preferred area</label><select id="brief-area" name="area"><option>Open to suggestions</option><option>Worli</option><option>Malabar Hill</option><option>Lower Parel</option><option>Prabhadevi</option></select></div></div><label for="brief-size">Space I need</label><select id="brief-size" name="size"><option>Open to suggestions</option><option>1 bedroom</option><option>2 bedrooms</option><option>3 bedrooms</option><option>4+ bedrooms</option><option>Commercial space</option></select><label for="brief-budget">Comfortable budget</label><input id="brief-budget" name="budget" autocomplete="off" placeholder="For example, ₹80,000 per month…" maxlength="100"><label for="brief-priorities">What matters most?</label><textarea id="brief-priorities" name="priorities" rows="3" maxlength="700" placeholder="A shorter commute, natural light, parking…"></textarea><button class="button" type="submit">Create my brief <span aria-hidden="true">↗</span></button></form><div id="brief-result" hidden><label for="brief-output">Your ready-to-copy brief</label><textarea id="brief-output" readonly rows="8"></textarea><div class="brief-actions"><button class="button" id="copy-brief" type="button">Copy brief</button><a class="text-link" href="https://www.instagram.com/soboproperty/" target="_blank" rel="noopener noreferrer">Open Instagram ↗</a></div></div><p id="brief-status" role="status" aria-live="polite"></p></div></dialog>
+</body>
+</html>
